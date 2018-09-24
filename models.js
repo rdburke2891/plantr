@@ -29,5 +29,16 @@ Vegetable.create({
 }).then(() => console.log("created"))
   .catch(er => {console.log(er)})
 
+  Plot.create({
+    size: 2,
+    shaded: true,
+  }).then(() => console.log("created"))
+    .catch(er => {console.log(er)})
+
+const PlotVegetable = db.model('vegetable_plot')
+PlotVegetable.create({
+  vegetableId: 1,
+  plotId: 1
+})
 
 module.exports = db
